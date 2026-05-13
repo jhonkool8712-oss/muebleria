@@ -2,7 +2,7 @@
 session_start();
 
 /* ===================== CONFIG ===================== */
-define('DB_HOST', 'jhonatan1_muebleria');
+define('DB_HOST', 'jhonatan_muebleria');
 define('DB_NAME', 'muebleria');
 define('DB_USER', 'jhonatan1');
 define('DB_PASS', 'clase123'); // <-- CAMBIA esto
