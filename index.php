@@ -2,9 +2,9 @@
 session_start();
 
 /* ===================== CONFIG ===================== */
-define('DB_HOST', 'jhonatan_muebleria');
+define('DB_HOST', 'mysql-jhonatan1.alwaysdata.net');
 define('DB_NAME', 'muebleria');
-define('DB_USER', 'jhonatan1');
+define('DB_USER', 'jhonatan1_muebleria');
 define('DB_PASS', 'clase123'); // <-- CAMBIA esto
 
 // Seguridad simple del panel admin (mejorable con login real)
