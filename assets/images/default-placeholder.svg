@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .bg { fill: #1a1f2e; }
+      .border { stroke: rgba(255,255,255,0.2); stroke-width: 2; fill: none; }
+      .icon { fill: rgba(255,255,255,0.4); }
+      .text { font-family: Arial, sans-serif; font-size: 16px; fill: rgba(255,255,255,0.5); text-anchor: middle; }
+    </style>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect class="bg" width="300" height="300"/>
+  
+  <!-- Borde -->
+  <rect class="border" x="20" y="20" width="260" height="260" rx="12"/>
+  
+  <!-- Icono de imagen -->
+  <g class="icon">
+    <circle cx="100" cy="100" r="25"/>
+    <path d="M 40 240 L 100 160 L 200 240 Z"/>
+    <path d="M 180 200 L 240 140 L 260 160 L 260 240 Z"/>
+  </g>
+  
+  <!-- Texto -->
+  <text class="text" x="150" y="260">Sin imagen disponible</text>
+</svg>

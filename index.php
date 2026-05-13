@@ -8,10 +8,10 @@ define('DB_USER', 'jhonatan1');
 define('DB_PASS', 'clase123'); // <-- CAMBIA esto
 
 // Seguridad simple del panel admin (mejorable con login real)
-define('ADMIN_PASS', 'admin123'); // <-- CAMBIA esto
+define('ADMIN_PASS', 'clase123'); // <-- CAMBIA esto
 
 // Contacto
-define('WHATSAPP_NUMBER', '+573001112233'); // sin +, con país
+define('WHATSAPP_NUMBER', '573001112233'); // sin +, con país
 define('WHATSAPP_MESSAGE', 'Hola, me interesa cotizar muebles. ¿Me pueden ayudar?');
 define('CONTACT_EMAIL', 'ventas@tudominio.com');
 
@@ -480,7 +480,7 @@ $slug = $cat ?? null;
                     <?php foreach($list as $p): ?>
                       <tr>
                         <td style="width:110px;">
-                          <img src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default.jpg'; ?>"
+                          <img src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default-placeholder.svg'; ?>"
                                style="width:70px;height:52px;object-fit:cover;border-radius:8px;">
                         </td>
                         <td><?php echo e($p['nombre']); ?></td>
@@ -531,7 +531,7 @@ $slug = $cat ?? null;
           <?php foreach($items as $it): ?>
             <div class="col-12">
               <div class="glass p-3 d-flex gap-3 align-items-center">
-                <img src="<?php echo $it['imagen'] ? 'assets/uploads/'.$it['imagen'] : 'assets/images/default.jpg'; ?>"
+                <img src="<?php echo $it['imagen'] ? 'assets/uploads/'.$it['imagen'] : 'assets/images/default-placeholder.svg'; ?>"
                      style="width:95px;height:70px;object-fit:cover;border-radius:12px;">
                 <div class="flex-grow-1">
                   <div class="fw-bold"><?php echo e($it['nombre']); ?></div>
@@ -634,14 +634,13 @@ $slug = $cat ?? null;
         <?php foreach($items as $p): ?>
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="product-card">
-              <img class="product-img w-100" src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default.jpg'; ?>" alt="">
+              <img class="product-img w-100" src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default-placeholder.svg'; ?>" alt="">
               <div class="p-3">
                 <span class="badge badge-soft mb-2"><?php echo e($p['categoria']); ?></span>
                 <div class="fw-bold"><?php echo e($p['nombre']); ?></div>
                 <div class="text-warning fw-bold fs-5 mt-1">$<?php echo money($p['precio']); ?></div>
                 <div class="d-flex gap-2 mt-3">
-                  <a class="btn btn-outline-light btn-sm w-100" href="?view=cart">🛒</a>
-                  <a class="btn btn-neon btn-sm w-100" href="?action=add&id=<?php echo (int)$p['id']; ?>">Agregar</a>
+                  <a class="btn btn-neon btn-sm w-100" href="?action=add&id=<?php echo (int)$p['id']; ?>">Agregar al carrito</a>
                 </div>
               </div>
             </div>
@@ -699,14 +698,13 @@ $slug = $cat ?? null;
           <?php foreach($home_products as $p): ?>
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="product-card">
-                <img class="product-img w-100" src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default.jpg'; ?>" alt="">
+                <img class="product-img w-100" src="<?php echo $p['imagen'] ? 'assets/uploads/'.$p['imagen'] : 'assets/images/default-placeholder.svg'; ?>" alt="">
                 <div class="p-3">
                   <span class="badge badge-soft mb-2"><?php echo e($p['categoria']); ?></span>
                   <div class="fw-bold"><?php echo e($p['nombre']); ?></div>
                   <div class="text-warning fw-bold fs-5 mt-1">$<?php echo money($p['precio']); ?></div>
                   <div class="d-flex gap-2 mt-3">
-                    <a class="btn btn-outline-light btn-sm w-100" href="?view=cart">🛒</a>
-                    <a class="btn btn-neon btn-sm w-100" href="?action=add&id=<?php echo (int)$p['id']; ?>">Agregar</a>
+                    <a class="btn btn-neon btn-sm w-100" href="?action=add&id=<?php echo (int)$p['id']; ?>">Agregar al carrito</a>
                   </div>
                 </div>
               </div>
